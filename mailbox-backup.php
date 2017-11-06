@@ -498,9 +498,9 @@
 				$keepCount = FALSE;
 				$keepPeriod = '1D';
 				if($backupRule['keep'] !== '*') {
-					if(preg_match('/^(\d+)([YMWD])$/', $backupRule['keep'], $keepMatches) === 1) {
+					if(preg_match('/^(\d+)\/(\d+[YMWD])$/', $backupRule['keep'], $keepMatches) === 1) {
 						$keepCount = intval($keepMatches[1]);
-						$keepPeriod = '1' . $keepMatches[2];
+						$keepPeriod = $keepMatches[2];
 					} else {
 						error_log('Invalid "keep" value in backup rule: "' . $backupRule['keep'] . '". Keeping all files.');
 					}
