@@ -31,8 +31,8 @@ The username and password are your mailbox username and password.
 
 You can have a webserver rewrite rule to access the backup storage directly instead of using the query string if you do not like or can use that construct.
 
-## Usage (if you use Keeweb)
-In [Keeweb](https://github.com/keeweb/keeweb) go for the WebDAV storage and choose 'Overwrite kdbx file with PUT' in the settings. For your WebDAV connection use the following fields (assuming here you created folder `backup` and subfolder `keeweb` in your IMAP account under your Inbox):
+## Usage (if you use KeeWeb)
+In [KeeWeb](https://github.com/keeweb/keeweb) go for the WebDAV storage and choose 'Overwrite kdbx file with PUT' in the settings. For your WebDAV connection use the following fields (assuming here you created folder `backup` and subfolder `keeweb` in your IMAP account under your Inbox):
 
     URL: https://your.site.org/secret/mailbox-backup.php?/backup/keeweb
     Username: <mailbox username>
